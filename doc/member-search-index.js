@@ -1,0 +1,1 @@
+memberSearchIndex = [{"p":"by.tc.task01.dao","c":"ApplianceDAO","l":"find(Criteria)","u":"find(by.tc.task01.entity.criteria.Criteria)"}];updateSearchResults();

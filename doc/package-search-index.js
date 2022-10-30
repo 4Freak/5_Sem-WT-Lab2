@@ -1,0 +1,1 @@
+packageSearchIndex = [{"l":"All Packages","u":"allpackages-index.html"},{"m":"_02","l":"by.tc.task01.dao"}];updateSearchResults();

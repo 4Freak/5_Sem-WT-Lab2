@@ -1,0 +1,1 @@
+typeSearchIndex = [{"l":"All Classes and Interfaces","u":"allclasses-index.html"},{"p":"by.tc.task01.dao","l":"ApplianceDAO"}];updateSearchResults();
