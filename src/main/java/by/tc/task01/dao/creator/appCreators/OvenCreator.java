@@ -14,7 +14,7 @@ import by.tc.task01.entity.Oven;
  */
 public class OvenCreator implements ApplianceCreator {
 
-	private static final String POWER_CONSUMPTION = "powerConsumtion";
+	private static final String POWER_CONSUMPTION = "powerConsumption";
 	private static final String WEIGHT = "weight";
 	private static final String CAPACITY = "capacity";
 	private static final String DEPTH = "depth";
@@ -32,7 +32,7 @@ public class OvenCreator implements ApplianceCreator {
 			if (nodes.item(i).getNodeType() == Node.ELEMENT_NODE) {
 				String text = nodes.item(i).getTextContent();
 				switch(nodes.item(i).getNodeName()) {
-					case POWER_CONSUMPTION 	-> oven.powerConsumtion = Integer.parseInt(text);
+					case POWER_CONSUMPTION 	-> oven.powerConsumption = Integer.parseInt(text);
 					case WEIGHT 			-> oven.weight = Integer.parseInt(text);
 					case CAPACITY			-> oven.capacity = Integer.parseInt(text);
 					case DEPTH				-> oven.depth = Integer.parseInt(text);

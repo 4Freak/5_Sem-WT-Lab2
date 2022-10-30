@@ -3,6 +3,7 @@ package by.tc.task01.dao.impl;
 import java.io.File;
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Map;
 
 import javax.xml.parsers.DocumentBuilder;
 import javax.xml.parsers.DocumentBuilderFactory;
@@ -23,7 +24,7 @@ import by.tc.task01.entity.criteria.Criteria;
  */
 public class ApplianceDAOImpl implements ApplianceDAO{
 
-	private static final String APPLIANCES_RES = "./src/main/resources/appliances_db.xml";	
+	private static final String APPLIANCES_RES = ".\\src\\main\\resources\\appliances_db.xml";//".src\\main\\resources\\appliances_db.xml";	
 	/**
 	 * {@inheritDoc}
 	 * Assumes that file has correct format
@@ -35,7 +36,8 @@ public class ApplianceDAOImpl implements ApplianceDAO{
 			
 			// Open xml file
 			DocumentBuilder  docBuilder = DocumentBuilderFactory.newInstance().newDocumentBuilder();
-			Document doc = docBuilder.parse(new File(APPLIANCES_RES));
+			File file = new File(APPLIANCES_RES);
+			Document doc = docBuilder.parse(file);
 			
 			Node root = doc.getDocumentElement();
 			NodeList nodes = root.getChildNodes();
@@ -50,7 +52,7 @@ public class ApplianceDAOImpl implements ApplianceDAO{
 						Map<String, Object> criterias = criteria.getSearchCriteria();
 						boolean isValid = true;
 						
-						for (Map.Entry<String, Object> entry : criterias.EntrySet) {
+						for (Map.Entry<String, Object> entry : criterias.entrySet()) {
 							String key = entry.getKey();
 							Object value = entry.getValue();
 							

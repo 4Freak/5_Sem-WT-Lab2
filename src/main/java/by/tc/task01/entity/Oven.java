@@ -10,7 +10,7 @@ import by.tc.task01.entity.criteria.SearchCriteria;
  */
 public class Oven extends Appliance{
 	
-	public int powerConsumtion;
+	public int powerConsumption;
 	public int weight;
 	public int capacity;
 	public int depth;
@@ -24,9 +24,9 @@ public class Oven extends Appliance{
 				"WEIGTH = %d, " +
 				"CAPACITY = %d, " +
 				"DEPTH = %d, " +
-				"HEIGHT = %.1f, " + 
-				"WIDTH = %.1f", 
-				powerConsumtion, weight, capacity, depth, height, weight);
+				"HEIGHT = %.2f, " + 
+				"WIDTH = %.2f ", 
+				powerConsumption, weight, capacity, depth, height, width);
 	}
 
 	/**
@@ -35,7 +35,7 @@ public class Oven extends Appliance{
 	@Override
 	public boolean isMatch(String key, Object value) {
 		return switch(SearchCriteria.Oven.valueOf(key)) {
-			case POWER_CONSUMPTION 	-> powerConsumtion == (Integer)value;
+			case POWER_CONSUMPTION 	-> powerConsumption == (Integer)value;
 			case WEIGHT 			-> weight == (Integer)value;
 			case CAPACITY			-> capacity == (Integer)value;
 			case DEPTH				-> depth == (Integer)value;
