@@ -13,7 +13,7 @@ public interface ApplianceCreator {
 
 	/**
 	 * Create appliance
-	 * @param appliance's list node
+	 * @param nodes - appliance's list node
 	 * @return a certain type of appliance
 	 */
 	Appliance create(NodeList nodes);

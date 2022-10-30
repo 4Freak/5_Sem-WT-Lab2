@@ -1,1 +1,1 @@
-moduleSearchIndex = [{"l":"_02"}];updateSearchResults();
+moduleSearchIndex = [];updateSearchResults();
